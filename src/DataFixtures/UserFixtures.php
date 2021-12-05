@@ -19,8 +19,8 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $user = new User();
-        $user->setEmail('admin@mediaforce.com');
-        $user->setPassword($this->encoder->encodePassword($user,'some'));
+        $user->setEmail('admin@admin.com');
+        $user->setPassword($this->encoder->encodePassword($user,'password'));
         $manager->persist($user);
  
         $manager->flush();
